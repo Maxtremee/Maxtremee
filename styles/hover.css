@@ -1,0 +1,16 @@
+/* All credits due: */
+/* https://css-tricks.com/cool-hover-effects-using-background-properties/ */
+
+.hover {
+  background-image: var(--bg-gradient);
+  background-size: 200% .12em;
+  background-position: 200% 100%;
+  background-repeat: no-repeat;
+  transition: background-size .3s, background-position .3s .3s;
+}
+
+.hover:hover {
+  transition: background-size .3s .3s, background-position .3s;
+  background-size: 200% 100%;
+  background-position: 100% 100%;
+}

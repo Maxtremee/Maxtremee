@@ -1,0 +1,38 @@
+.social-icon {
+  color: whitesmoke;
+  transform: scale(1.5);
+  transition: transform 300ms;
+}
+
+.social-icon:hover {
+  transform: scale(2.5);
+}
+
+.social-icon:focus {
+  transform: scale(2.5);
+}
+
+.social-icon:active {
+  transform: scale(2.5);
+}
+
+#greetings {
+  width: 33%;
+  margin: 1em;
+}
+
+#employee {
+  transition: 300ms;
+}
+
+#employee:hover {
+  color: gray;
+}
+
+#socials {
+  margin-top: 2em;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
