@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets'
 export type Props = {
 	title: string
 	description: string
@@ -17,7 +18,7 @@ const { title, description, image, href } = Astro.props
 		<div
 			class="aspect-h-1 aspect-w-1 xl:aspect-h-8 xl:aspect-w-7 w-full overflow-hidden rounded-t-md"
 		>
-			<img src={image.src} alt={image.alt} />
+			<Image src={image} alt={image.alt} loading="lazy" />
 		</div>
 		<div class="flex flex-col gap-2 p-4">
 			<p class="font-sans text-lg dark:text-white">{title}</p>

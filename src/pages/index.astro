@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets'
 import Layout from '../layouts/Layout.astro'
 import pfp from '../assets/pfp.jpg'
 import Section from '../components/Section.astro'
@@ -20,8 +21,8 @@ import SectionDivider from '../components/SectionDivider.astro'
 						I'm a frontend developer
 					</h2>
 				</div>
-				<img
-					src={pfp.src}
+				<Image
+					src={pfp}
 					alt="Maksymilian Zadka"
 					class="w-full rounded-2xl animate-in slide-in-from-right duration-500 md:w-1/3"
 				/>
