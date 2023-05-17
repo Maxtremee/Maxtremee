@@ -15,12 +15,13 @@ const { title } = Astro.props
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class="bg-white dark:bg-black">
-		<slot />
-	</body>
+		<meta name="description" content="Maksymilian Zadka's personal website" <title />{title}</head
+	>
 </html>
+<body class="bg-white dark:bg-black">
+	<slot />
+</body>
+
 <style is:global>
 	/* css variables go here */
 	:root {
