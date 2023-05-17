@@ -1,0 +1,29 @@
+---
+import website from '../assets/website.png'
+import nextfile from '../assets/nextfile.jpeg'
+import bookSarbinowo from '../assets/book-sarbinowo.png'
+import ProjectCard from './ProjectCard.astro'
+---
+
+<div
+	class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"
+>
+	<ProjectCard
+		title="Personal website"
+		description="Portfolio website made with Astro, TailwindCSS and TypeScript"
+		image={{ ...website, alt: 'Personal website' }}
+		href=""
+	/>
+	<ProjectCard
+		title="Nextfile"
+		description="HTTP file directory made with Next.js and MUI"
+		image={{ ...nextfile, alt: 'Netxfile app' }}
+		href="https://github.com/Maxtremee/Nextfile"
+	/>
+	<ProjectCard
+		title="book-sarbinowo"
+		description="Apartment reservation app made with Remix, Mantine and Prisma"
+		image={{ ...bookSarbinowo, alt: 'book-sarbinowo app' }}
+		href="https://github.com/Maxtremee/book-sarbinowo"
+	/>
+</div>
