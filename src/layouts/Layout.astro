@@ -1,12 +1,6 @@
 ---
 import '@fontsource/inter'
 import '@fontsource/jetbrains-mono'
-
-export interface Props {
-	title: string
-}
-
-const { title } = Astro.props
 ---
 
 <!DOCTYPE html>
@@ -15,19 +9,16 @@ const { title } = Astro.props
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="Maksymilian Zadka's personal website" <title />{title}</head
-	>
-</html>
-<body class="bg-white dark:bg-black">
-	<slot />
-</body>
+		<meta name="description" content="Maksymilian Zadka's personal website" />
+	</head>
+	<body class="flex justify-center bg-white dark:bg-black">
+		<div class="max-w-7xl"><slot /></div>
+	</body>
 
-<style is:global>
-	/* css variables go here */
-	:root {
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style>
+	<style is:global>
+		code {
+			font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+				Bitstream Vera Sans Mono, Courier New, monospace;
+		}
+	</style>
+</html>

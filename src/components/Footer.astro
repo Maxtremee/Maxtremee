@@ -3,20 +3,26 @@ import { Icon } from 'astro-icon'
 ---
 
 <footer class="flex items-center justify-center gap-4 p-6 md:p-8">
-	<a href="https://github.com/Maxtremee" class="h-6 w-6" target="_blank" rel="noopener noreferrer"
-		><Icon pack="mdi" name="github" /></a
-	>
-	<a href="https://gitlab.com/maxtremee" class="h-6 w-6" target="_blank" rel="noopener noreferrer"
-		><Icon pack="mdi" name="gitlab" /></a
-	>
-	<p class="font-sans text-sm dark:text-white">
-		Copyright © Maksymilian Zadka {new Date().getFullYear()}
-	</p>
+  <a href="https://github.com/Maxtremee" class="h-6 w-6" target="_blank" rel="noopener noreferrer"
+    ><Icon pack="mdi" name="github" /></a
+  >
+  <a href="https://gitlab.com/maxtremee" class="h-6 w-6" target="_blank" rel="noopener noreferrer"
+    ><Icon pack="mdi" name="gitlab" /></a
+  >
+  <p class="font-sans text-sm dark:text-white">
+    Copyright © Maksymilian Zadka <span id="year"></span>
+  </p>
 </footer>
 <style lang="css">
-	@media (prefers-color-scheme: dark) {
-		[astro-icon] {
-			color: white;
-		}
-	}
+  @media (prefers-color-scheme: dark) {
+    [astro-icon] {
+      color: white;
+    }
+  }
 </style>
+<script>
+  const date = document.getElementById('year')
+  if (date) {
+    date.innerText = new Date().getFullYear().toString()
+  }
+</script>

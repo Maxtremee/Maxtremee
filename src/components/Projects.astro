@@ -1,29 +1,47 @@
 ---
+import { Image } from 'astro:assets'
 import website from '../assets/website.png'
 import nextfile from '../assets/nextfile.jpeg'
 import bookSarbinowo from '../assets/book-sarbinowo.png'
+import sdw from '../assets/sdw.png'
 import ProjectCard from './ProjectCard.astro'
 ---
 
 <div
-	class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"
+  class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"
 >
-	<ProjectCard
-		title="Personal website"
-		description="Portfolio website made with Astro, TailwindCSS and TypeScript"
-		image={{ ...website, alt: 'Personal website' }}
-		href="https://github.com/Maxtremee/Maxtremee"
-	/>
-	<ProjectCard
-		title="Nextfile"
-		description="HTTP file directory made with Next.js and MUI"
-		image={{ ...nextfile, alt: 'Netxfile app' }}
-		href="https://github.com/Maxtremee/Nextfile"
-	/>
-	<ProjectCard
-		title="book-sarbinowo"
-		description="Apartment reservation app made with Remix, Mantine and Prisma"
-		image={{ ...bookSarbinowo, alt: 'book-sarbinowo app' }}
-		href="https://github.com/Maxtremee/book-sarbinowo"
-	/>
+  <ProjectCard
+    title="Personal website"
+    description="Portfolio website made with Astro, TailwindCSS and TypeScript"
+    image={{ ...website, alt: 'Personal website' }}
+    href="https://github.com/Maxtremee/Maxtremee"
+  />
+  <ProjectCard
+    title="Nextfile"
+    description="HTTP file directory made with Next.js and MUI"
+    image={{ ...nextfile, alt: 'Netxfile app' }}
+    href="https://github.com/Maxtremee/Nextfile"
+  />
+  <ProjectCard
+    title="book-sarbinowo"
+    description="Apartment reservation app made with Remix, Mantine and Prisma"
+    image={{ ...bookSarbinowo, alt: 'book-sarbinowo app' }}
+    href="https://github.com/Maxtremee/book-sarbinowo"
+  />
+  <div
+    class="flex h-full cursor-pointer flex-col justify-between rounded-md transition-all duration-200 hover:ring hover:ring-gray-400 dark:hover:ring-gray-600"
+  >
+    <div
+      class="aspect-h-1 aspect-w-1 xl:aspect-h-8 xl:aspect-w-7 w-full overflow-hidden rounded-t-md"
+    >
+      <Image src={sdw} alt="sdw app" loading="lazy" />
+    </div>
+    <div class="flex flex-col gap-2 p-4">
+      <p class="font-sans text-lg dark:text-white">SDW</p>
+      <p class="font-mono text-sm text-gray-600 dark:text-gray-400">
+        Inventory management system with separate frontends for employees and distributors. Made
+        with Next.js, tRPC and Prisma (closed source)
+      </p>
+    </div>
+  </div>
 </div>

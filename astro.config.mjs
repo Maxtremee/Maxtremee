@@ -1,13 +1,15 @@
-import { defineConfig } from "astro/config"
+import { defineConfig } from 'astro/config';
+import vercel from '@astrojs/vercel/serverless';
+import tailwind from '@astrojs/tailwind';
 
-import vercelStatic from "@astrojs/vercel/static"
-import tailwind from "@astrojs/tailwind"
+import solidJs from "@astrojs/solid-js";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()],
-  adapter: vercelStatic(),
+  integrations: [tailwind(), solidJs()],
+  adapter: vercel(),
+  output: 'server',
   experimental: {
-    assets: true,
-  },
-})
+    assets: true
+  }
+});

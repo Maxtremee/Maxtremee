@@ -1,28 +1,28 @@
 ---
 import { Image } from 'astro:assets'
 export type Props = {
-	title: string
-	description: string
-	image: ImageMetadata & {
-		alt: string
-	}
-	href: string
+  title: string
+  description: string
+  image: ImageMetadata & {
+    alt: string
+  }
+  href: string
 }
 const { title, description, image, href } = Astro.props
 ---
 
 <a href={href} target="_blank" rel="noopener noreferrer"
-	><div
-		class="flex h-full cursor-pointer flex-col justify-between rounded-md transition-all duration-200 hover:ring hover:ring-gray-400 dark:hover:ring-gray-600"
-	>
-		<div
-			class="aspect-h-1 aspect-w-1 xl:aspect-h-8 xl:aspect-w-7 w-full overflow-hidden rounded-t-md"
-		>
-			<Image src={image} alt={image.alt} loading="lazy" />
-		</div>
-		<div class="flex flex-col gap-2 p-4">
-			<p class="font-sans text-lg dark:text-white">{title}</p>
-			<p class="font-mono text-sm text-gray-600 dark:text-gray-400">{description}</p>
-		</div>
-	</div></a
+  ><div
+    class="flex h-full cursor-pointer flex-col justify-between rounded-md transition-all duration-200 hover:ring hover:ring-gray-400 dark:hover:ring-gray-600"
+  >
+    <div
+      class="aspect-h-1 aspect-w-1 xl:aspect-h-8 xl:aspect-w-7 w-full overflow-hidden rounded-t-md"
+    >
+      <Image src={image} alt={image.alt} loading="lazy" />
+    </div>
+    <div class="flex flex-col gap-2 p-4">
+      <p class="font-sans text-lg dark:text-white">{title}</p>
+      <p class="font-mono text-sm text-gray-600 dark:text-gray-400">{description}</p>
+    </div>
+  </div></a
 >
