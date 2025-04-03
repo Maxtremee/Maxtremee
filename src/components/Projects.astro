@@ -1,9 +1,9 @@
 ---
-import { Image } from 'astro:assets'
-import website from '../assets/website.png'
-import nextfile from '../assets/nextfile.jpeg'
+import website from '../assets/website.jpg'
+import nextfile from '../assets/nextfile.jpg'
 import bookSarbinowo from '../assets/book-sarbinowo.png'
 import sdw from '../assets/sdw.png'
+import tsTypedfiles from '../assets/ts-typedfiles.jpg'
 import ProjectCard from './ProjectCard.astro'
 ---
 
@@ -12,9 +12,20 @@ import ProjectCard from './ProjectCard.astro'
 >
   <ProjectCard
     title="Personal website"
-    description="Portfolio website made with Astro, TailwindCSS and TypeScript"
+    description="Portfolio website made with Astro and TailwindCSS"
     image={{ ...website, alt: 'Personal website' }}
     href="https://github.com/Maxtremee/Maxtremee"
+  />
+  <ProjectCard
+  title="SDW"
+  description="Inventory management system with separate frontends for employees and distributors. Made with Next.js, tRPC and Prisma (closed source)"
+  image={{ ...sdw, alt: 'sdw app' }}
+/>
+  <ProjectCard
+    title="ts-typedfiles"
+    description="TypeScript library for generating string literal type of file paths"
+    image={{ ...tsTypedfiles, alt: 'ts-typedfiles repo' }}
+    href="https://www.npmjs.com/package/ts-typedfiles"
   />
   <ProjectCard
     title="Nextfile"
@@ -28,20 +39,4 @@ import ProjectCard from './ProjectCard.astro'
     image={{ ...bookSarbinowo, alt: 'book-sarbinowo app' }}
     href="https://github.com/Maxtremee/book-sarbinowo"
   />
-  <div
-    class="flex h-full cursor-pointer flex-col justify-between rounded-md transition-all duration-200 hover:ring hover:ring-gray-400 dark:hover:ring-gray-600"
-  >
-    <div
-      class="aspect-h-1 aspect-w-1 xl:aspect-h-8 xl:aspect-w-7 w-full overflow-hidden rounded-t-md"
-    >
-      <Image src={sdw} alt="sdw app" loading="lazy" />
-    </div>
-    <div class="flex flex-col gap-2 p-4">
-      <p class="font-sans text-lg dark:text-white">SDW</p>
-      <p class="font-mono text-sm text-gray-600 dark:text-gray-400">
-        Inventory management system with separate frontends for employees and distributors. Made
-        with Next.js, tRPC and Prisma (closed source)
-      </p>
-    </div>
-  </div>
 </div>

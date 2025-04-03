@@ -10,7 +10,7 @@ import { Icon } from 'astro-icon'
     ><Icon pack="mdi" name="gitlab" /></a
   >
   <p class="font-sans text-sm dark:text-white">
-    Copyright © Maksymilian Zadka <span id="year"></span>
+    Copyright © Maksymilian Zadka <span>{new Date().getFullYear().toString()}</span>
   </p>
 </footer>
 <style lang="css">
@@ -20,9 +20,4 @@ import { Icon } from 'astro-icon'
     }
   }
 </style>
-<script>
-  const date = document.getElementById('year')
-  if (date) {
-    date.innerText = new Date().getFullYear().toString()
-  }
-</script>
+
